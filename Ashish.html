@@ -1,0 +1,339 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Ashish ❤️ Pratibha | Wedding Invitation</title>
+<link href="https://fonts.googleapis.com/css2?family=Great+Vibes&family=Playfair+Display:wght@400;600;700&family=Cormorant+Garamond:wght@400;600&family=Tiro+Devanagari+Hindi&display=swap" rel="stylesheet">
+<style>
+:root{--wine:#591b25;--red:#8c2635;--gold:#c79a4b;--gold-l:#f5d99e;--bg:#fff5e5;--card:#fffaf0;--ink:#591b25;--soft:#a87835;
+box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}
+:root:not([data-theme="light"]){color-scheme:light dark}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]){--bg:#2a0e14;--card:#3a141c;--ink:#f5e3c0;--soft:#d9b56e;--red:#f0b6a0}}
+:root[data-theme="dark"]{--bg:#2a0e14;--card:#3a141c;--ink:#f5e3c0;--soft:#d9b56e;--red:#f0b6a0}
+*{margin:0;padding:0;box-sizing:border-box}
+html{scroll-behavior:smooth;height:100%;scroll-padding-top:env(safe-area-inset-top,0px)}
+body{background:var(--bg);color:var(--ink);font-family:'Cormorant Garamond',Georgia,serif;font-size:19px;overflow-x:hidden}
+body.locked{overflow:hidden;height:100%}
+body::before{content:"";position:fixed;top:0;left:0;right:0;height:env(safe-area-inset-top,0px);background:#4d171d;z-index:90}
+
+/* CURTAIN */
+.curtain{position:fixed;inset:0;z-index:500;display:flex;pointer-events:auto}
+.curtain.gone{pointer-events:none}
+.panel{flex:1;background:repeating-linear-gradient(90deg,#6e1d2b 0 22px,#8c2635 22px 44px);transition:transform 1.8s cubic-bezier(.7,0,.2,1);border:0 solid var(--gold)}
+.panel.l{border-right-width:3px}.panel.r{border-left-width:3px}
+.curtain.open .l{transform:translateX(-101%)}.curtain.open .r{transform:translateX(101%)}
+.seal{position:absolute;inset:0;display:grid;place-content:center;text-align:center;color:var(--gold-l);transition:opacity .8s,transform .8s;gap:12px;padding:20px}
+.curtain.open .seal{opacity:0;transform:scale(1.4)}
+.seal .om{font-size:70px;animation:pulse 2s infinite}
+.seal h1{font-family:'Great Vibes',cursive;font-weight:400;font-size:clamp(46px,10vw,80px)}
+.seal button{justify-self:center}
+@keyframes pulse{50%{transform:scale(1.15);text-shadow:0 0 30px #ffd98a}}
+
+/* NAV */
+nav{position:fixed;top:calc(15px + env(safe-area-inset-top,0px));left:50%;transform:translateX(-50%);z-index:100;display:flex;gap:22px;padding:13px 25px;border:1px solid #e9c98e;border-radius:40px;background:#4d171ddd;backdrop-filter:blur(10px);max-width:95%}
+nav a{color:#fff;text-decoration:none;font-size:14px;letter-spacing:1px;transition:.3s}
+nav a:hover{color:var(--gold)}
+.gold-btn,.btn{display:inline-block;padding:14px 35px;background:var(--gold);color:#381016;text-decoration:none;border:0;border-radius:30px;cursor:pointer;letter-spacing:2px;font:inherit;transition:.3s;position:relative;overflow:hidden}
+.gold-btn:hover,.btn:hover{background:#fff;transform:scale(1.07)}
+.btn::after{content:"";position:absolute;top:0;left:-80%;width:50%;height:100%;background:linear-gradient(90deg,transparent,#fff9,transparent);transform:skewX(-20deg);animation:shine 3s infinite}
+@keyframes shine{to{left:150%}}
+
+/* HERO */
+.hero{position:relative;min-height:100vh;min-height:100svh;display:flex;justify-content:center;align-items:center;text-align:center;overflow:hidden;background:radial-gradient(circle at 50% 40%,#7a2233,#3a1018 70%);color:#fff}
+.hero::after{content:"";position:absolute;inset:12px;border:2px solid #e8c77e;pointer-events:none}
+.mandala{position:absolute;width:min(130vw,900px);aspect-ratio:1;top:50%;left:50%;margin:calc(min(130vw,900px)/-2) 0 0 calc(min(130vw,900px)/-2);opacity:.22;animation:spin 90s linear infinite}
+.mandala.b{width:min(95vw,640px);margin:calc(min(95vw,640px)/-2) 0 0 calc(min(95vw,640px)/-2);animation-direction:reverse;animation-duration:60s;opacity:.28}
+@keyframes spin{to{transform:rotate(360deg)}}
+.hero-content{position:relative;z-index:5;padding:20px;text-shadow:0 3px 15px #321015}
+.small-title{font-size:15px;letter-spacing:5px;text-transform:uppercase}
+.mantra{font-family:'Tiro Devanagari Hindi',serif;font-size:26px;color:#ffe3a4;margin:20px 0}
+.hero h1{font-family:'Great Vibes',cursive;font-weight:400;font-size:clamp(58px,11vw,120px);color:#ffe4ae;margin:14px 0;line-height:1.1;animation:glow 3s infinite alternate}
+.hero h1 span{display:inline-block;opacity:0;transform:translateY(40px) rotate(8deg);animation:letter .8s forwards}
+.hero h2{font-family:'Playfair Display',serif;font-size:19px;letter-spacing:4px;font-weight:400}
+.hero p.d{font-size:22px;margin:12px}
+.decoration{color:var(--gold);font-size:28px;margin:18px}
+.line{display:block;height:2px;width:0;margin:10px auto;background:linear-gradient(90deg,transparent,var(--gold),transparent);transition:width 1.6s}
+.in .line,.line.in{width:min(320px,70%)}
+.diya{position:absolute;bottom:5%;font-size:48px;animation:flame 2.4s ease-in-out infinite;filter:drop-shadow(0 0 18px #ffb347)}
+.diya:nth-of-type(odd){left:6%}.diya:nth-of-type(even){right:6%;animation-delay:-1.2s}
+.peacock{position:absolute;font-size:64px;top:9%;animation:float 6s ease-in-out infinite}
+.peacock.l{left:5%}.peacock.r{right:5%;animation-delay:-3s;transform:scaleX(-1)}
+@keyframes flame{0%,100%{transform:translateY(0) scale(1)}50%{transform:translateY(-12px) scale(1.12)}}
+@keyframes float{50%{translate:0 -16px}}
+@keyframes letter{to{opacity:1;transform:none}}
+@keyframes glow{from{text-shadow:0 0 10px #ffd98a}to{text-shadow:0 0 38px #ffd98a}}
+.spark{position:absolute;width:6px;height:6px;border-radius:50%;background:#ffe9a8;box-shadow:0 0 16px 4px #ffca6a;animation:twinkle 3s infinite alternate}
+@keyframes twinkle{to{opacity:.15;transform:scale(.4) translateY(-20px)}}
+
+/* SECTIONS */
+section{padding:85px 20px;text-align:center}
+.container{max-width:900px;margin:auto}
+.section-title{font-family:'Playfair Display',serif;font-size:clamp(30px,6vw,48px);margin:15px 0}
+.subtitle{color:var(--soft);letter-spacing:4px;text-transform:uppercase;font-size:14px}
+.invitation-card{margin:35px auto;max-width:700px;padding:50px 25px;background:var(--card);border:2px solid var(--gold);outline:1px solid #d8b16c;outline-offset:8px;box-shadow:0 15px 40px #551b251c;position:relative;overflow:hidden}
+.invitation-card::before{content:"";position:absolute;inset:0;background:linear-gradient(115deg,transparent 40%,#ffe9a855 50%,transparent 60%);transform:translateX(-100%);animation:sweep 6s infinite}
+@keyframes sweep{60%,100%{transform:translateX(100%)}}
+.hindi{font-family:'Tiro Devanagari Hindi',serif;color:var(--soft);line-height:2}
+.couple{font-family:'Great Vibes',cursive;font-size:clamp(55px,9vw,85px);color:var(--red);margin:10px}
+.blessings{margin:35px auto 0;padding:28px 20px;max-width:760px;border-top:1px solid #d8b16c;border-bottom:1px solid #d8b16c;background:var(--card)}
+.blessings .sk{font-family:'Tiro Devanagari Hindi',serif;font-size:clamp(20px,3vw,26px);line-height:1.9;color:var(--red)}
+.events{background:linear-gradient(135deg,color-mix(in srgb,var(--bg) 80%,#c79a4b),var(--bg))}
+.event-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:25px;margin-top:40px}
+.event-card{background:var(--card);border:1px solid var(--gold);padding:35px 20px;box-shadow:0 10px 30px #45151a15;transition:.4s}
+.event-card:hover{transform:translateY(-10px) rotate(-.6deg);box-shadow:0 20px 40px #45151a30}
+.event-card h3{font-family:'Playfair Display',serif;font-size:30px;color:var(--red);margin:14px}
+.event-icon{font-size:44px;display:inline-block;animation:float 4s ease-in-out infinite}
+.event-date{color:var(--soft);letter-spacing:2px}
+.event-time{font-size:26px;margin:8px}
+.venue{background:var(--wine);color:#fff}
+.venue .section-title,.venue-name{color:var(--gold-l)}
+.venue-card{border:1px solid var(--gold);padding:40px 20px;margin:30px auto;max-width:650px}
+.venue-name{font-family:'Playfair Display',serif;font-size:clamp(35px,7vw,58px);margin:18px 0}
+.countdown{background:var(--card)}
+.timer{display:flex;justify-content:center;flex-wrap:wrap;gap:15px;margin:40px auto}
+.tb{min-width:95px;padding:20px 12px;background:var(--bg);border:1px solid var(--gold);box-shadow:0 5px 20px #551b2510}
+.tb strong{display:block;font-family:'Playfair Display',serif;font-size:38px;color:var(--red)}
+.tb strong.tick{animation:tick .5s}
+@keyframes tick{50%{transform:translateY(-8px) scale(1.15);opacity:.5}}
+.tb span{font-size:13px;letter-spacing:2px}
+.rsvp{background:linear-gradient(120deg,color-mix(in srgb,var(--bg) 85%,#c79a4b),var(--bg))}
+.rsvp-form{max-width:550px;margin:35px auto;padding:30px;background:var(--card);border:1px solid var(--gold);box-shadow:0 10px 35px #551b2515;text-align:left}
+.rsvp-form label{display:block;margin:15px 0 5px}
+.rsvp-form input,.rsvp-form select,.rsvp-form textarea{width:100%;padding:13px;border:1px solid #d6b77f;background:var(--bg);color:var(--ink);font:inherit;font-size:17px;transition:.3s}
+.rsvp-form input:focus,.rsvp-form select:focus,.rsvp-form textarea:focus{outline:0;border-color:var(--red);box-shadow:0 0 0 4px #c79a4b44}
+.submit-btn{width:100%;padding:14px;margin-top:20px;background:var(--wine);color:#fff;border:0;cursor:pointer;letter-spacing:2px;font:inherit;transition:.3s}
+.submit-btn:hover{background:var(--gold);color:var(--wine)}
+footer{background:#351218;color:var(--gold-l);padding:55px 20px calc(55px + env(safe-area-inset-bottom,0px));text-align:center}
+footer h2{font-family:'Great Vibes',cursive;font-size:55px;font-weight:400}
+.flower{position:fixed;top:-30px;z-index:200;pointer-events:none;animation:fall linear forwards}
+@keyframes fall{to{transform:translate(var(--dx),110vh) rotate(600deg);opacity:0}}
+.reveal{opacity:0;transform:translateY(40px);transition:opacity 1s,transform 1s}
+.reveal.show{opacity:1;transform:none}
+.reveal>*{opacity:0;transform:translateY(24px);transition:opacity .8s,transform .8s}
+.reveal.show>*{opacity:1;transform:none}
+.reveal.show>*:nth-child(2){transition-delay:.15s}.reveal.show>*:nth-child(3){transition-delay:.3s}.reveal.show>*:nth-child(4){transition-delay:.45s}.reveal.show>*:nth-child(5){transition-delay:.6s}
+@media(max-width:650px){nav{gap:12px;padding:12px}nav a{font-size:11px}.event-grid{grid-template-columns:1fr}.tb{min-width:75px}.tb strong{font-size:30px}.peacock{font-size:44px}.diya{font-size:36px}}
+@media(prefers-reduced-motion:reduce){*,*::before,*::after{animation:none!important;transition:none!important}.reveal,.reveal>*,.hero h1 span{opacity:1;transform:none}.line{width:200px}}
+</style>
+</head>
+<body class="locked">
+
+<div class="curtain" id="curtain">
+  <div class="panel l"></div><div class="panel r"></div>
+  <div class="seal">
+    <div class="om">ॐ</div>
+    <p style="letter-spacing:5px;text-transform:uppercase;font-size:14px">You are cordially invited</p>
+    <h1>Ashish &amp; Pratibha</h1>
+    <button class="btn" id="openBtn">OPEN INVITATION ♥</button>
+  </div>
+</div>
+
+<nav>
+  <a href="#invite">Invitation</a><a href="#events">Events</a><a href="#venue">Venue</a><a href="#rsvp">RSVP</a>
+</nav>
+
+<section class="hero" id="home">
+  <svg class="mandala" id="m1" viewBox="-100 -100 200 200" aria-hidden="true"></svg>
+  <svg class="mandala b" id="m2" viewBox="-100 -100 200 200" aria-hidden="true"></svg>
+  <span class="peacock l" aria-hidden="true">🦚</span><span class="peacock r" aria-hidden="true">🦚</span>
+  <span class="diya" aria-hidden="true">🪔</span><span class="diya" aria-hidden="true">🪔</span>
+  <div class="hero-content">
+    <p class="small-title">Together with our families</p>
+    <p class="mantra">॥ श्री गणेशाय नमः ॥</p>
+    <div class="decoration">✦ ❧ ✦</div>
+    <h1 id="names" aria-label="Ashish and Pratibha"></h1>
+    <span class="line" id="heroLine"></span>
+    <h2>WE ARE GETTING MARRIED</h2>
+    <p class="d">09 December 2026</p>
+    <p class="d">Haveli Garden, Kanpur</p>
+    <a class="btn" href="#invite" style="margin-top:20px">SCROLL TO EXPLORE ↓</a>
+  </div>
+</section>
+
+<section class="invitation" id="invite">
+  <div class="container reveal">
+    <p class="subtitle">A Sacred Beginning</p>
+    <div class="decoration">❧ ❦ ❧</div>
+    <div class="invitation-card">
+      <p class="hindi">वक्रतुण्ड महाकाय सूर्यकोटि समप्रभ।<br>निर्विघ्नं कुरु मे देव सर्वकार्येषु सर्वदा॥</p>
+      <div class="decoration">ॐ</div>
+      <p>With the blessings of our elders,</p>
+      <p style="margin:20px">Shri Mahendra Yadav joyfully invites you to celebrate the wedding of his beloved daughter</p>
+      <div class="couple">Pratibha</div>
+      <p>with</p>
+      <div class="couple">Ashish</div>
+      <p>Beloved son of<br>Shri Ram Prakash Yadav</p>
+      <div class="decoration">✧ ✧ ✧</div>
+      <p>Your presence will make our celebration special.</p>
+    </div>
+    <div class="blessings">
+      <div class="sk">सर्वे भवन्तु सुखिनः, सर्वे सन्तु निरामयाः।<br>शुभमस्तु! मंगलं भवतु!</div>
+      <p style="margin-top:10px;color:var(--soft)">May happiness, love and prosperity bless the couple and both families.</p>
+      <div class="decoration">ॐ श्री राधाकृष्णाभ्यां नमः</div>
+    </div>
+  </div>
+</section>
+
+<section class="events" id="events">
+  <div class="container reveal">
+    <p class="subtitle">Wedding Celebrations</p>
+    <h2 class="section-title">The Wedding Festivities</h2>
+    <p>Two beautiful days filled with love and happiness.</p>
+    <div class="event-grid">
+      <div class="event-card"><div class="event-icon">🌼</div><p class="event-date">08 DECEMBER 2026</p><h3>Haldi Ceremony</h3><p class="event-time">11:00 AM</p><p>A beautiful beginning filled with sunshine, flowers and blessings.</p></div>
+      <div class="event-card"><div class="event-icon">🪔</div><p class="event-date">09 DECEMBER 2026</p><h3>Wedding Ceremony</h3><p class="event-time">06:00 PM</p><p>Join us as two hearts become one for a lifetime.</p></div>
+    </div>
+  </div>
+</section>
+
+<section class="venue" id="venue">
+  <div class="container reveal">
+    <p class="subtitle">Save The Location</p>
+    <h2 class="section-title">Join Our Celebration</h2>
+    <div class="venue-card">
+      <div class="decoration">✦ ❧ ✦</div>
+      <div class="venue-name">Haveli Garden</div>
+      <p>Kanpur, Uttar Pradesh</p>
+      <p style="margin-top:15px">We look forward to welcoming you on our special day.</p>
+      <a class="gold-btn" href="https://www.google.com/maps/search/?api=1&query=Haveli+Garden+Kanpur+Uttar+Pradesh" target="_blank" rel="noopener" style="margin-top:25px">GET DIRECTIONS ↗</a>
+    </div>
+  </div>
+</section>
+
+<section class="countdown">
+  <div class="container reveal">
+    <p class="subtitle">The Big Day Is Coming</p>
+    <h2 class="section-title">Counting Down To Forever</h2>
+    <div class="timer">
+      <div class="tb"><strong id="days">000</strong><span>DAYS</span></div>
+      <div class="tb"><strong id="hours">00</strong><span>HOURS</span></div>
+      <div class="tb"><strong id="minutes">00</strong><span>MINUTES</span></div>
+      <div class="tb"><strong id="seconds">00</strong><span>SECONDS</span></div>
+    </div>
+  </div>
+</section>
+
+<section class="rsvp" id="rsvp">
+  <div class="container reveal">
+    <p class="subtitle">Kindly Respond</p>
+    <h2 class="section-title">Will You Join Us?</h2>
+    <p>Your presence and blessings mean everything to us.</p>
+    <form class="rsvp-form" id="rsvpForm">
+      <label for="guestName">Your Name</label>
+      <input type="text" id="guestName" placeholder="Enter your name" required>
+      <label for="attendance">Attendance</label>
+      <select id="attendance"><option>Joyfully Accepts</option><option>Regretfully Declines</option></select>
+      <label for="guestCount">Number of Guests</label>
+      <select id="guestCount"><option>1</option><option>2</option><option>3</option><option>4</option><option>5+</option></select>
+      <label for="message">Your Wishes</label>
+      <textarea id="message" rows="4" placeholder="Write your wishes..."></textarea>
+      <button type="submit" class="submit-btn">SEND YOUR WISHES ♥</button>
+    </form>
+  </div>
+</section>
+
+<footer>
+  <h2>With Love &amp; Blessings</h2>
+  <div class="decoration">❧ ❦ ❧</div>
+  <p>Ashish ❤️ Pratibha</p><p>09 December 2026</p><p>Haveli Garden, Kanpur</p><br>
+  <small>MADE WITH LOVE FOR OUR SPECIAL DAY</small>
+</footer>
+
+<script>
+// Mandala art (inline SVG)
+function mandala(id, n, r1, r2, sw){
+  let s = '<g fill="none" stroke="#e8c77e" stroke-width="' + sw + '">';
+  for (let i = 0; i < n; i++) s += '<ellipse cx="0" cy="-' + r1 + '" rx="' + (r1 / 4) + '" ry="' + (r1 / 1.6) + '" transform="rotate(' + (360 / n * i) + ')"/>';
+  s += '<circle r="' + r2 + '"/><circle r="' + (r2 * 0.55) + '"/><circle r="' + (r2 * 1.35) + '" stroke-dasharray="2 3"/></g>';
+  document.getElementById(id).innerHTML = s;
+}
+mandala('m1', 16, 40, 85, .4);
+mandala('m2', 12, 34, 60, .5);
+
+// Names, letter by letter
+const names = document.getElementById('names');
+"Ashish & Pratibha".split('').forEach((c, i) => {
+  const sp = document.createElement('span');
+  sp.innerHTML = c === ' ' ? '&nbsp;' : (c === '&' ? '&amp;' : c);
+  sp.style.animationDelay = (2.2 + i * 0.09) + 's';
+  names.appendChild(sp);
+});
+
+// Curtain
+document.getElementById('openBtn').addEventListener('click', () => {
+  const c = document.getElementById('curtain');
+  c.classList.add('open');
+  document.body.classList.remove('locked');
+  burst(60);
+  setTimeout(() => { c.classList.add('gone'); c.style.display = 'none'; document.getElementById('heroLine').classList.add('in'); }, 1900);
+  setTimeout(() => document.getElementById('heroLine').classList.add('in'), 2000);
+});
+
+// Sparkles in hero
+const hero = document.getElementById('home');
+for (let i = 0; i < 28; i++) {
+  const s = document.createElement('span');
+  s.className = 'spark';
+  s.style.top = Math.random() * 100 + '%';
+  s.style.left = Math.random() * 100 + '%';
+  s.style.animationDelay = (Math.random() * 3) + 's';
+  s.style.animationDuration = (2 + Math.random() * 3) + 's';
+  hero.appendChild(s);
+}
+
+// Falling petals
+function petal(){
+  const f = document.createElement('div');
+  f.className = 'flower';
+  f.textContent = ['🌸', '🌺', '🏵️', '🌼'][Math.floor(Math.random() * 4)];
+  f.style.left = Math.random() * 100 + 'vw';
+  f.style.fontSize = (12 + Math.random() * 16) + 'px';
+  f.style.setProperty('--dx', (Math.random() * 160 - 80) + 'px');
+  f.style.animationDuration = (6 + Math.random() * 5) + 's';
+  document.body.appendChild(f);
+  setTimeout(() => f.remove(), 12000);
+}
+function burst(n){ for (let i = 0; i < n; i++) setTimeout(petal, i * 40); }
+setInterval(() => { if (!document.hidden && !document.body.classList.contains('locked')) petal(); }, 800);
+
+// Scroll reveal
+const io = new IntersectionObserver(es => es.forEach(e => {
+  if (e.isIntersecting) { e.target.classList.add('show'); io.unobserve(e.target); }
+}), { threshold: 0.15 });
+document.querySelectorAll('.reveal').forEach(el => io.observe(el));
+
+// Countdown
+const wedding = new Date(2026, 11, 9, 18, 0, 0);
+const prev = {};
+function setVal(id, v){
+  const el = document.getElementById(id);
+  if (prev[id] !== v) {
+    el.textContent = v;
+    if (prev[id] !== undefined) { el.classList.remove('tick'); void el.offsetWidth; el.classList.add('tick'); }
+    prev[id] = v;
+  }
+}
+function tickDown(){
+  const d = Math.max(0, wedding - new Date());
+  setVal('days', String(Math.floor(d / 86400000)).padStart(3, '0'));
+  setVal('hours', String(Math.floor(d / 3600000) % 24).padStart(2, '0'));
+  setVal('minutes', String(Math.floor(d / 60000) % 60).padStart(2, '0'));
+  setVal('seconds', String(Math.floor(d / 1000) % 60).padStart(2, '0'));
+}
+tickDown();
+setInterval(tickDown, 1000);
+
+// WhatsApp RSVP: add the family's number below, format 91XXXXXXXXXX
+const WHATSAPP_NUMBER = "";
+document.getElementById('rsvpForm').addEventListener('submit', e => {
+  e.preventDefault();
+  const v = id => document.getElementById(id).value;
+  const text = "Wedding RSVP - Ashish & Pratibha\n\nName: " + v('guestName') + "\nAttendance: " + v('attendance') + "\nGuests: " + v('guestCount') + "\nWishes: " + v('message');
+  const n = WHATSAPP_NUMBER.replace(/\D/g, '');
+  window.open((n ? 'https://wa.me/' + n : 'https://wa.me/') + '?text=' + encodeURIComponent(text), '_blank');
+  burst(40);
+});
+</script>
+</body>
+</html>
